@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/form.css">
     <script src="https://kit.fontawesome.com/057ab5b72f.js" crossorigin="anonymous"></script>
+    <script src="JS/form.js" defer></script>
     <title>form</title>
 </head>
 
 <body>
     <main>
         <section>
-            <div class="Form">
+            <div class="Form" id="FormID">
                 <div class="formBox Login">
                     <h2>Entrar com</h2>
                     <div class="formlogo">
@@ -64,20 +65,18 @@
                     </form>
                     <button class="btn">Cadastrar</button>
                 </div>
-                <div class="overlay-container">
-                    <div class="overlay-content">
+                <div class="overlayContainer">
+                    <div class="overlayContent">
                         <h2>Já tem conta?</h2>
                         <p>Para entrar na nossa plataforma faça login com suas informações</p>
-                        <button class="btn btnOverlay">Entrar</button>
+                        <button class="btn btnOverlay" id="btnOverlayLogin">Entrar</button>
+                    </div>
+                    <div class="overlayContent">
+                        <h2>Olá Aluno!</h2>
+                        <p>Cadastre-se e conheçe a usar a nossa plataforma on-line</p>
+                        <button class="btn btnOverlay" id="btnOverlayRegister">Cadastrar</button>
                     </div>
                 </div>
-                <div class="overlay-container Aluno">
-                        <div class="overlay-content">
-                            <h2>Olá Aluno!</h2>
-                            <p>Cadastre-se e conheçe a usar a nossa plataforma on-line</p>
-                            <button class="btn btnOverlay">Cadastrar</button>
-                        </div>
-                    </div>
             </div>
         </section>
     </main>
