@@ -1,3 +1,4 @@
+/*Zerando o elemento pai do HTML*/
 * {
     margin: 0;
     padding: 0;
@@ -5,26 +6,31 @@
     box-sizing: border-box;
 }
 
+/*Chamando o conteudo principal*/
 main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: #242424;
+    height: 100vh; /*Definindo que a altura do main é de 100% da tela*/
+    display: flex; /*Colocando as Divs em Flex*/
+    flex-direction: column; /*Direcionando os elementos em coluna*/
+    justify-content: center; /*Elementos centralizados no x */
+    align-items: center; /*Elementos centralizados no y */
+    text-align: center; /*Textos centralizados no eixo y */
+    background-color: #242424; /*Cor de fundo*/
 }
+/*Finalizando o conteudo principal*/
 
+/*Chamando o Elemento pai*/
 .Form {
-    position: relative;
-    height: 480px;
-    width: 768px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    overflow: hidden;
+    position: relative; /*Declarando que a posição é Relativa, ou seja, a posição dela é propria, e não do elemento HTML*/
+    height: 480px; /*Altura do "Retangulo"*/
+    width: 768px; /*Largura do "Retangulo"*/
+    border-radius: 12px; /*Colocando uma curva nas bordas"*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /*Colocando sombras nas bordas*/
+    display: flex; /*Colocando as Divs em Flex*/
+    overflow: hidden; /*Hidden é para esconder os elementos que estiverem fora do Form*/
 }
+/*Finalizando o Elemento pai*/
 
+/*Chamando onde fica os formularios*/
 .formBox {
     display: flex;
     flex-direction: column;
@@ -38,56 +44,70 @@ main {
     transition: 1s;
     background-color: #2e2e2e;
 }
+/*Finalizando onde fica os formularios*/
 
+/*Chamando onde fica os formularios apenas registro*/
 .Register {
-    transform: translateX(-100%);
-    z-index: -1;
-    opacity: 0;
+    transform: translateX(-100%); /*Jogando o elemento no eixo x totalmente á esquerda(nesse caso)*/
+    z-index: -1; /*Definindo que o elemento não será visivel*/
+    opacity: 0;  /*Confirmando que o elemento não será visivel*/
 }
+/*Finalizando onde fica os formularios apenas registro*/
 
+/*Chamando formulario registro apenas quando a classe togglerContainer for adicionado ao elemento pai Form*/
 .Form.togglerContainer .Register {
-    transform: translateX(0%);
-    z-index: 1;
-    opacity: 1;
+    transform: translateX(0%); /*Jogando o elemento no eixo x totalmente á Direita(nesse caso)*/
+    z-index: 1; /*Definindo que o elemento será visivel*/
+    opacity: 1; /*Confirmando que o elemento será visivel*/
 }
+/*Finalizando formulario registro*/
 
+/*Chamando formulario Login apenas quando a classe togglerContainer for adicionado ao elemento pai Form*/
 .Form.togglerContainer .Login {
-    transform: translateX(100%);
-    z-index: -1;
-    opacity: 0;
+    transform: translateX(100%); /*Jogando o elemento no eixo x totalmente á Esquerda(nesse caso)*/
+    z-index: -1; /*Definindo que o elemento não será visivel*/
+    opacity: 0; /*Confirmando que o elemento não será visivel*/
 }
+/*Finalizando formulario Login*/
 
+/*Chamando H2 do formulario e do overlay*/
 .formBox h2,
 .overlayContent h2 {
-    font-size: 2.7em;
-    font-weight: 400;
-    color: #E65100;
+    font-size: 2.7em; /*Tamanho da fonte*/
+    font-weight: 400; /*Negrito da fonte*/
+    color: #E65100; /*cor*/
 }
+/*Finalizando H2 do formulario e do overlay*/
 
+/*Chamando a e p do formulario*/
 .formBox a,
 p {
-    padding: 0.5em;
-    text-decoration: none;
-    color: #E65100;
+    padding: 0.5em;  /*Espaço*/
+    text-decoration: none; /*Sem decoração de texto*/
+    color: #E65100; /*cor*/
 }
+/*Finalizando a e p do formulario*/
 
+/*Chamando Icones*/
 .social-icon {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    margin: 10px;
-    border-radius: 50%;
-    background-color: #E65100;
-    color: white;
-    font-size: 1.5rem;
-    overflow: hidden;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    position: relative; /*Definindo que ele é o lemento pai de quem esta dentro(i)*/
+    display: inline-flex; /*Definindo que o elemento será em linha*/
+    align-items: center;  /*Elementos centralizados no y */
+    justify-content: center; /*Elementos centralizados no x */
+    width: 45px; /*Largura do Icone*/
+    height: 45px; /*Altura do Icone*/
+    margin: 10px; /*Margin do Icone*/
+    border-radius: 50%; /*Deixando redondo*/
+    background-color: #E65100; /*Cor de fundo*/
+    color: white; /*Cor*/
+    font-size: 1.5rem; /*Tamanho*/
+    overflow: hidden; /*Hidden é para esconder os elementos que estiverem fora do Form*/
+    text-decoration: none; /*Sem decoração de texto*/
+    transition: color 0.3s ease; /*Fazendo uma transição de cor, com velocidade de 0.3s facil*/
 }
+/*Finalizando Icones*/
 
+/*Chamando Icones*/
 .social-icon::before {
     content: "";
     position: absolute;
