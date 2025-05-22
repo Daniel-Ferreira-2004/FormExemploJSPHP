@@ -13,9 +13,14 @@
 <body>
     <main>
         <section>
+            <!--Começo do Form elemento pai-->
             <div class="Form" id="FormID">
+
+                <!--Começo do formBox onde vai ficar o formulario de Login-->
                 <div class="formBox Login">
                     <h2>Entrar com</h2>
+
+                    <!--Começo do formlogo onde vai ficar as Logos-->
                     <div class="formlogo">
                         <a href="" class="social-icon">
                             <i class="fa-brands fa-facebook"></i>
@@ -27,7 +32,11 @@
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
+                    <!--Fechamento do formlogo onde vai ficar as Logos-->
+
                     <p>ou utilize sua conta</p>
+
+                    <!--Começo do Formulario Login-->
                     <form action="">
                         <input type="email" name="email" id="email" class="email formInput" placeholder="Email"
                             required>
@@ -35,14 +44,24 @@
                         <input type="password" name="password" id="password" class="password formInput"
                             placeholder="Senha" required>
                     </form>
+                    <!--Fechamento do Formulario Login-->
+
                     <a href="#">Esqueceu sua senha?</a>
                     <button class="btn">Logar</button>
 
+                    <!--Começo do Registra-se para Mobile-->
                     <p class="mobile-text">Não tem conta? <a id="btnOverlayLoginMobile">Registre-se</a>
                     </p>
+                    <!--Fechamento do Registra-se para Mobile-->
+
                 </div>
+                <!--Fechamento do formBox Login-->
+
+                <!--Começo do formBox onde vai ficar o formulario de Registro-->
                 <div class="formBox Register">
                     <h2>Criar Conta</h2>
+
+                    <!--Começo do formlogo onde vai ficar as Logos-->
                     <div class="formlogo">
                         <a href="" class="social-icon">
                             <i class="fa-brands fa-facebook"></i>
@@ -54,10 +73,13 @@
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
-                    <p>ou cadastre seu email</p>
-                    <form action="">
+                    <!--Fechamento do formlogo onde vai ficar as Logos-->
 
-                        <div class="SeparaForm">
+                    <p>ou cadastre seu email</p>
+
+                    <!--Começo do Formulario Login-->
+                    <form action="">
+                        <div class="SeparaForm"> <!--SeparaForm usado para separar os formulario de 2 em 2-->
                             <input type="name" name="name" id="name" class="name formInput" placeholder="Nome" required>
 
                             <input type="name" name="Fullname" id="Fullname" class="Fullname formInput"
@@ -76,28 +98,50 @@
                             placeholder="Numero de Telefone (11) *_****_****" required>
                         <input type="text" name="adress" id="adress" class="adress formInput" placeholder="Endereço"
                             required>
-
                     </form>
+                    <!--Fechamento do Formulario Login-->
+
                     <button class="btn">Cadastrar</button>
-                    
+
+                    <!--Começo do Login para Mobile-->
                     <p class="mobile-text">Já tem conta? <a id="btnOverlayRegisterMobile">Faça o login</a>
                     </p>
+                    <!--Fechamento do Login para Mobile-->
                 </div>
+                <!--Fechamento do formBox Registro-->
+
+                <!--Começo do overlayContainer onde vai ficar o Overlay dos formularios-->
                 <div class="overlayContainer">
+
+                    <!--Começo do overlayContent Login, o conteudo do Overlay-->
                     <div class="overlayContent">
                         <h2>Já tem conta?</h2>
                         <p>Para fazer login entre aqui</p>
+
+                        <!--Começo do btnOverlay, o botão onde será acrescentado o event do JavaScritp para movimentação do Overlay-->
                         <button class="btn btnOverlay" id="btnOverlayLogin">Entrar</button>
+                        <!--Fechamento do btnOverlay-->
 
                     </div>
+                    <!--Fechamento do overlayContent-->
+
+                    <!--Começo do overlayContent Cadastre-se, o conteudo do Overlay-->
                     <div class="overlayContent">
                         <h2>Não tem conta ?</h2>
                         <p>Cadastre-se aqui</p>
-                        <button class="btn btnOverlay" id="btnOverlayRegister">Cadastrar</button>
 
+                        <!--Começo do btnOverlay, o botão onde será acrescentado o event do JavaScritp para movimentação do Overlay-->
+                        <button class="btn btnOverlay" id="btnOverlayRegister">Cadastrar</button>
+                        <!--Fechamento do btnOverlay-->
                     </div>
+                    <!--Fechamento do overlayContent Cadastre-se-->
+
                 </div>
+                <!--Fechamento do overlayContainer-->
+
             </div>
+            <!--Fechamento do Form elemento pai-->
+
         </section>
     </main>
 </body>
