@@ -25,23 +25,23 @@ main {
     width: 768px; /*Largura do "Retangulo"*/
     border-radius: 12px; /*Colocando uma curva nas bordas"*/
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /*Colocando sombras nas bordas*/
-    display: flex; /*Colocando as Divs em Flex*/
+    display: flex;
     overflow: hidden; /*Hidden é para esconder os elementos que estiverem fora do Form*/
 }
 /*Finalizando o Elemento pai*/
 
 /*Chamando onde fica os formularios*/
 .formBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; /*Espaçando os elementos por iguais*/
+    text-align: center; 
     padding: 2em;
-    height: 100%;
+    height: 100%; 
     width: 50%;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    transition: 1s;
+    transition: 1s; /*Transição para aparecer de 1s*/
     background-color: #2e2e2e;
 }
 /*Finalizando onde fica os formularios*/
@@ -73,18 +73,18 @@ main {
 /*Chamando H2 do formulario e do overlay*/
 .formBox h2,
 .overlayContent h2 {
-    font-size: 2.7em; /*Tamanho da fonte*/
-    font-weight: 400; /*Negrito da fonte*/
-    color: #E65100; /*cor*/
+    font-size: 2.7em;
+    font-weight: 400; 
+    color: #E65100;
 }
 /*Finalizando H2 do formulario e do overlay*/
 
 /*Chamando a e p do formulario*/
 .formBox a,
 p {
-    padding: 0.5em;  /*Espaço*/
+    padding: 0.5em;
     text-decoration: none; /*Sem decoração de texto*/
-    color: #E65100; /*cor*/
+    color: #E65100;
 }
 /*Finalizando a e p do formulario*/
 
@@ -94,49 +94,53 @@ p {
     display: inline-flex; /*Definindo que o elemento será em linha*/
     align-items: center;  /*Elementos centralizados no y */
     justify-content: center; /*Elementos centralizados no x */
-    width: 45px; /*Largura do Icone*/
-    height: 45px; /*Altura do Icone*/
-    margin: 10px; /*Margin do Icone*/
+    width: 45px; 
+    height: 45px;
+    margin: 10px;
     border-radius: 50%; /*Deixando redondo*/
-    background-color: #E65100; /*Cor de fundo*/
-    color: white; /*Cor*/
-    font-size: 1.5rem; /*Tamanho*/
+    background-color: #E65100;
+    color: white;
+    font-size: 1.5rem;
     overflow: hidden; /*Hidden é para esconder os elementos que estiverem fora do Form*/
     text-decoration: none; /*Sem decoração de texto*/
     transition: color 0.3s ease; /*Fazendo uma transição de cor, com velocidade de 0.3s facil*/
 }
 /*Finalizando Icones*/
 
-/*Chamando Icones*/
+/*Chamando Icones:before(antes)*/
 .social-icon::before {
-    content: "";
-    position: absolute;
+    content: ""; /*Conteudo do before*/
+    position: absolute; /*Posição absoluta dentro do elemento pai*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #242424;
-    z-index: 0;
-    transition: transform 0.8s ease;
-    transform: translateY(100%);
+    z-index: 0; /*Será visivel*/
+    transition: 0.8s ease; /*Transição de 0.8s*/
+    transform: translateY(100%); /*Transformando o eixo y em 100%*/
 }
+/*Finalizando Icones:before*/
 
+/*Chamando Icones:before(antes) com hover(passar do mouse)*/
 .social-icon:hover::before {
-    transform: translateY(0);
+    transform: translateY(0); /*Com hover, vai transformar o eixo y em 0*/
 }
+/*Finalizando Icones:before(antes) hover*/
 
+/*Chamando Icones i*/
 .social-icon i {
-    position: relative;
-    z-index: 1;
-    transition: color 0.3s ease;
+    z-index: 1; /*Tornando Visivel já no inicio da tela*/
+    transition: color 0.3s ease;  /*Transição de cor de 0.3s*/
     color: #242424;
 }
+/*Finalizando Icones i*/
 
 .social-icon:hover i {
     color: #E65100;
 }
 
-
+/*Chamando Inputs*/
 .formInput {
     width: 100%;
     padding: 1em 1em 0.5em;
@@ -146,11 +150,14 @@ p {
     background-color: #E65100;
     color: #242424;
 }
+/*Finalizando Inputs*/
 
+/*Cor do placeholder*/
 input::placeholder {
     color: black;
 }
 
+/*Chamando Botão*/
 .btn {
     position: relative;
     width: 12em;
@@ -187,9 +194,10 @@ input::placeholder {
 .btn:hover {
     color: #242424;
 }
+/*Finalizando Botão*/
 
 .SeparaForm {
-    display: flex;
+    display: flex; /*Input dentro da div ficarão do lado do outro*/
 }
 
 .Fullname,
@@ -197,24 +205,27 @@ input::placeholder {
     margin-left: 1em;
 }
 
+/*Chamando Overlay(camada de cima)*/
 .overlayContainer {
-    position: absolute;
+    position: absolute; /*Declarando que ele está sob o elemento pai dele*/
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    z-index: 999;
-    transform: translateX(100%);
+    z-index: 999; /*Declarando que ele está Por cima de qualquer coisa*/
+    transform: translateX(100%); /*Declarando que ele está sob o elemento pai dele*/
     transition: 1s;
 }
 
+/*Chamando o Overlay apenas quando a classe togglerContainer for adicionado ao elemento pai Form*/
 .Form.togglerContainer .overlayContainer {
-    transform: translateX(0%);
+    transform: translateX(0%); /*Jogando o elemento no eixo x totalmente á Esquerda(nesse caso)*/
     transition: 0.8s;
 }
 
-.Form.togglerContainer .overlayContent:nth-child(2) {
-    z-index: -1;
+/*Chamando o Overlay 2 apenas quando a classe togglerContainer for adicionado ao elemento pai Form*/
+.Form.togglerContainer .overlayContent:nth-child(2) { /*nth-child vai chamar o a segunda div com a classe overlayContent*/
+    z-index: -1; /*Declarando que não será visivel quando estiver com a classe toggler*/
     opacity: 0;
 }
 
@@ -254,11 +265,13 @@ input::placeholder {
 .btnOverlay:hover {
     color: #E65100;
 }
+/*Finalizando Overlay(camada de cima)*/
 
 .mobile-text {
     display: none;
 }
 
+/*Tela Tablet e celular*/
 @media (max-width: 768px) {
 
     .overlayContainer {
@@ -294,6 +307,7 @@ input::placeholder {
     }
 }
 
+/*Tela celulares*/
 @media (max-width: 480px) {
 
     .Form {
