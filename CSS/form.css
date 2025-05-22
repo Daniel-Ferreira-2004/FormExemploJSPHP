@@ -12,7 +12,7 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
-
+    background-color: #242424;
 }
 
 .Form {
@@ -36,7 +36,7 @@ main {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     transition: 1s;
-    background-color: white;
+    background-color: #242424;
 }
 
 .Register{
@@ -60,12 +60,13 @@ main {
 .formBox h2, .overlayContent h2 {
     font-size: 3em;
     font-weight: 400;
+    color: #E65100;
 }
 
 .formBox a, p {
     padding: 0.5em;
     text-decoration: none;
-    color: black;
+    color: #E65100;
 }
 
 .formlogo img {
@@ -79,7 +80,8 @@ main {
     margin-top: 0.8em;
     border: transparent;
     border-radius: 8px;
-    background-color: #e9e9e985;
+    background-color: #E65100;
+    color: #242424;
 }
 
 .btn {
@@ -88,9 +90,9 @@ main {
     padding: 0.5em;
     margin: 0.5em auto;
     border-radius: 2em;
-    color: #FF3131;
-    border: 2px solid #FF3131;
-    background-color: white;
+    color: #E65100;
+    border: 2px solid #E65100;
+    background-color: #242424;
     font-size: 1em;
     overflow: hidden;
     cursor: pointer;
@@ -106,7 +108,7 @@ main {
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: #FF3131;
+    background-color: #E65100;
     z-index: -1;
     transition: width 0.8s ease;
 }
@@ -116,7 +118,7 @@ main {
 }
 
 .btn:hover {
-    color: white;
+    color: #242424;
 }
 
 .SeparaForm{
@@ -152,34 +154,35 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #FF3131;
+    background-color: #E65100;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    color: white;
+    color: #242424;
 }
 
 .overlayContent h2 {
     padding-bottom: 0.5em;
+    color: #242424;
 }
 
 .overlayContent p {
-    color: white;
+    color: #242424;
     margin: 0 3em;
 }
 
 .btnOverlay {
-    background-color: #FF3131;
-    color: white;
-    border: 2px solid white;
+    background-color: #E65100;
+    color: #242424;
+    border: 2px solid #242424;
 }
 
 .btnOverlay::before {
-    background-color: white;
+    background-color: #242424;
 }
 
 .btnOverlay:hover {
-    color: #FF3131;
+    color: #E65100;
 }
