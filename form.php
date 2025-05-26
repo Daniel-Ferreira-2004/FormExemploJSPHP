@@ -1,3 +1,14 @@
+<?php
+if (isset($_POST['submit'])) {
+    print_r($_POST['nome']);
+    print_r($_POST['email']);
+    print_r($_POST['password']);
+    print_r($_POST['Fullname']);
+    print_r($_POST['tel']);
+    print_r($_POST['adress']);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,7 +48,7 @@
                     <p>ou utilize sua conta</p>
 
                     <!--Começo do Formulario Login-->
-                    <form action="">
+                    <form action="php/config.php" method="post">
                         <input type="email" name="email" id="email" class="email formInput" placeholder="Email"
                             required>
 
@@ -47,7 +58,7 @@
                     <!--Fechamento do Formulario Login-->
 
                     <a href="#">Esqueceu sua senha?</a>
-                    <button class="btn">Logar</button>
+                    <input  type="submit" name="submit" id="submit" class="btn">Logar</input>
 
                     <!--Começo do Registra-se para Mobile-->
                     <p class="mobile-text">Não tem conta? <a id="btnOverlayLoginMobile">Registre-se</a>
@@ -78,7 +89,7 @@
                     <p>ou cadastre seu email</p>
 
                     <!--Começo do Formulario Login-->
-                    <form action="">
+                    <form action="php/config.php" method="post">
                         <div class="SeparaForm"> <!--SeparaForm usado para separar os formulario de 2 em 2-->
                             <input type="name" name="name" id="name" class="name formInput" placeholder="Nome" required>
 
@@ -96,6 +107,7 @@
 
                         <input type="tel" name="tel" id="tel" class="tel formInput"
                             placeholder="Numero de Telefone (11) *_****_****" required>
+
                         <input type="text" name="adress" id="adress" class="adress formInput" placeholder="Endereço"
                             required>
                     </form>
