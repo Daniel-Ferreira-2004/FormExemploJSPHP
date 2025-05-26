@@ -220,7 +220,7 @@ input::placeholder {
 /*Chamando o Overlay apenas quando a classe togglerContainer for adicionado ao elemento pai Form*/
 .Form.togglerContainer .overlayContainer {
     transform: translateX(0%); /*Jogando o elemento no eixo x totalmente á Esquerda(nesse caso)*/
-    transition: 0.8s;
+    transition: 1s;
 }
 
 /*Chamando o Overlay 2 apenas quando a classe togglerContainer for adicionado ao elemento pai Form*/
