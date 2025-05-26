@@ -106,7 +106,11 @@ if (isset($_POST['submit'])) {
                             placeholder="Senha" required>
 
 
+<<<<<<< HEAD
                         <a href="#" class="esqueceuSenha">Esqueceu sua senha?</a>
+=======
+                        <a href="#">Esqueceu sua senha?</a>
+>>>>>>> 7263acf61b27bb70d3a60df5f8cf1942772bb0d4
 
 
                         <button type="submit" name="submit" id="submit" class="btn">Enviar</button>
