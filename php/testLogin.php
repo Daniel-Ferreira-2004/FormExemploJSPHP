@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 // Aqui a gente verifica se o botão "submit" foi apertado e se os campos de email e senha foram preenchidos
 if (isset($_POST["submit"]) && !empty($_POST['email']) && !empty($_POST['passwords'])) {
 
@@ -23,44 +22,9 @@ if (isset($_POST["submit"]) && !empty($_POST['email']) && !empty($_POST['passwor
     if (mysqli_num_rows($result) < 1) {
         // Então mandamos o usuário de volta para o formulário
         header("location: ../form.php");
+        exit;
     } else {
         // Mas se achamos alguém com esse email e senha...
         // Mostramos uma mensagem dizendo que a pessoa existe (login certo!)
-=======
-//print_r($_REQUEST);
-if (isset($_POST["submit"]) && !empty($_POST['email']) && !empty($_POST['passwords'])) {
-    //Acessa o sistema
-    include_once('config.php');
-    $email = $_POST['email'];
-    $senha = $_POST['passwords'];
-
-    $sql = "SELECT * FROM formulariodaniel WHERE email = '$email' AND senha = '$senha'";
-
-    $result = $conexao->query($sql);
-
-    //print ($sql);
-    //print_r($result);
-
-    if (mysqli_num_rows($result) < 1) {
-        //não existe usuario no Banco de Dados
-        header("location: ../form.php");
-    } else {
-        //existe usuario no Banco de Dados
->>>>>>> 7263acf61b27bb70d3a60df5f8cf1942772bb0d4
-        print_r('Existe');
     }
-
-} else {
-<<<<<<< HEAD
-    // Se a pessoa tentou acessar essa página sem preencher os campos...
-    // Mandamos ela de volta para o formulário também!
-    header("location:../form.php");
-    exit;
 }
-?>
-=======
-    header("location:../form.php");
-    exit;
-}
-?>
->>>>>>> 7263acf61b27bb70d3a60df5f8cf1942772bb0d4
