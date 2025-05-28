@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/form.css">
+    <script src="https://kit.fontawesome.com/057ab5b72f.js" crossorigin="anonymous"></script>
+    <script src="JS/form.js" defer></script>
+    <title>form</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <!--Começo do Form elemento pai-->
+            <div class="Form" id="FormID">
+
+                <!--Começo do formBox onde vai ficar o formulario de Login-->
+                <div class="formBox Login recuperacao">
+
+                    <!--Começo do Formulario Login-->
+                    <form action="php/redefinir.php" method="POST">
+                        <div class="recuperaFlex">
+                            <label>Digite seu Email:</label>
+                            <input type="email" name="email" class="formInputRecupera" required>
+                            <button type="submit" class="btn btnRecuperacao btnOverlay">Enviar link de recuperação</button>
+                        </div>
+                    </form>
+                    <!--Fechamento do Formulario Login-->
+
+                </div>
+                <!--Fechamento do formBox Login-->
+            </div>
+        </section>
+    </main>
+</body>
